@@ -14,9 +14,10 @@ import java.util.*;
  * @author joham3169
  */
 public class PLAYERSCREEN extends javax.swing.JFrame {
-int WIDTH = 300, HEIGHT = 300;
+        int WIDTH = 300, HEIGHT = 300;
         int ROWS = 15;
         int COLUMNS = 15;
+        Graphics g;
     /**
      * Creates new form PLAYERSCREEN
      */
@@ -107,14 +108,15 @@ int WIDTH = 300, HEIGHT = 300;
                 new PLAYERSCREEN().setVisible(true);
             }
         });
+        Grid();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
     
-    public void Grid(Graphics g){
-        g.drawLine(ROWS, COLUMNS, WIDTH, HEIGHT);
+public void Grid(){
+        g.drawLine(ROWS, COLUMNS, WIDTH, HEIGHT); 
         
     }
 }
