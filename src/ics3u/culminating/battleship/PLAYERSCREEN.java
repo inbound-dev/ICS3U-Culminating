@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * 
+ * 
  */
 
 package ics3u.culminating.battleship;
@@ -15,8 +15,8 @@ import java.util.*;
  * @author joham3169
  */
 public class PLAYERSCREEN extends javax.swing.JFrame {
-        
-    Random randint = new Random(3);
+    Random randint = new Random();
+    int RI = randint.nextInt(4);
     
     /**
      * Creates new form PLAYERSCREEN
@@ -34,12 +34,13 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        CompChoice = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -54,8 +55,18 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         jLabel1.setText("Rock Paper Scissors ");
 
         jButton1.setText("Rock");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Paper");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Scissors");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +75,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Pending...");
+        CompChoice.setText("Pending...");
 
         jLabel3.setText("USER");
 
@@ -84,7 +95,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2))
+                        .addComponent(CompChoice))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -121,7 +132,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2)
-                    .addComponent(jLabel2))
+                    .addComponent(CompChoice))
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
@@ -148,8 +159,16 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,16 +211,61 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CompChoice;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+    // This Method Checks to see if the random number generated by the computer are out of range
+    // if it is out of range it will add or subtract to make it in range
+   public void RNG(){
+    Random randint = new Random();
     
+    int RI = randint.nextInt(4);
+    
+    if (RI == 0){
+       RI = RI + 1; 
+       
+    }
+    if (RI == 4){
+        RI = RI - 1;
+        
+    }
+    String CRI  = String.valueOf(RI);
+    
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+    if(){
+        
+    }
+   }
 }
