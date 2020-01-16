@@ -260,7 +260,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
          
     }
     
-    
+   
     
     CRI  = String.valueOf(RI);
    }
