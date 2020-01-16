@@ -17,6 +17,7 @@ import java.util.*;
 public class PLAYERSCREEN extends javax.swing.JFrame {
     String CRI;
     int USER_CHOICE;
+    int UC;
     
     Random randint = new Random();
     int RI = randint.nextInt(4);
@@ -163,20 +164,29 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
 
     private void USER_SCISSORSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_SCISSORSActionPerformed
     //Scissors
+    
     USER_CHOICE = 3;
+    RNG();
     choices();
+    NumToChoice();
     }//GEN-LAST:event_USER_SCISSORSActionPerformed
 
     private void USER_PAPERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_PAPERActionPerformed
     //Paper
+    
     USER_CHOICE = 2;
+    RNG();
     choices();
+    NumToChoice();
     }//GEN-LAST:event_USER_PAPERActionPerformed
 
     private void USER_ROCKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_ROCKActionPerformed
     // ROCK
+    
     USER_CHOICE = 1;
+    RNG();
     choices();
+    NumToChoice();
     }//GEN-LAST:event_USER_ROCKActionPerformed
 
     /**
@@ -249,36 +259,49 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
          
     }
     CRI  = String.valueOf(RI);
-    CompChoice.setText(CRI);
    }
    
    public void choices(){
-       if(USER_CHOICE == 1 && CRI.equals(1)){
+       
+       UC = Integer.valueOf(CRI);
+       
+       if(USER_CHOICE == 1 && UC == 1){
            WINSTATE.setText("You Tied"); 
        }
-       if(USER_CHOICE == 1 && CRI.equals(3)){
+       if(USER_CHOICE == 1 && UC == 3){
            WINSTATE.setText("You won");
        }
-       if(USER_CHOICE == 1 && CRI.equals(2)){
+       if(USER_CHOICE == 1 && UC == 2){
            WINSTATE.setText("You Lost"); 
        }
-       if(){
+       if(USER_CHOICE == 2 && UC == 2){
            WINSTATE.setText("You Tied"); 
        }
-       if(){
+       if(USER_CHOICE == 2 && UC == 1){
            WINSTATE.setText("You won"); 
        }
-       if(){
+       if(USER_CHOICE == 2 && UC == 3){
            WINSTATE.setText("You Lost"); 
        }
-       if(){
+       if(USER_CHOICE == 3 && UC == 3){
            WINSTATE.setText("You Tied"); 
        }
-       if(){
+       if(USER_CHOICE == 3 && UC == 1){
            WINSTATE.setText("You won");
        }
-       if(){
+       if(USER_CHOICE == 3 && UC == 2){
            WINSTATE.setText("You Lost");
+       }
+   }
+   public void NumToChoice(){
+       if(UC == 1){
+           CompChoice.setText("Rock");
+       }
+       if(UC == 2){
+           CompChoice.setText("Paper");
+       }
+       if(UC == 3){
+           CompChoice.setText("Scissors");
        }
    }
 }
