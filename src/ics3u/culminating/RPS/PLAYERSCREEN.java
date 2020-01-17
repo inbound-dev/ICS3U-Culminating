@@ -18,6 +18,9 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     int USER_CHOICE;
     int UC;
     int LastInt;
+    int CurrentInt;
+    int [] arr = new int [2];
+    
     
     Random randint = new Random();
     int RI = randint.nextInt(4);
@@ -49,6 +52,8 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         WINSTATE = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        array = new javax.swing.JLabel();
+        array1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,86 +94,101 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
 
         jLabel6.setText("Win Or Loss Status");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(USER_PAPER)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CompChoice))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(152, 152, 152)
-                                .addComponent(jLabel1)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                        .addComponent(jLabel4)))
-                .addGap(64, 64, 64))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(USER_ROCK)
-                            .addComponent(USER_SCISSORS)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(WINSTATE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(38, 38, 38)
-                .addComponent(USER_ROCK)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(USER_PAPER)
-                    .addComponent(CompChoice))
-                .addGap(18, 18, 18)
-                .addComponent(USER_SCISSORS)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(33, 33, 33)
-                .addComponent(WINSTATE)
-                .addGap(103, 103, 103))
-        );
+        array.setText("Pend\\");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
-        );
+            array1.setText("jLabel2");
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+            jPanel1.setLayout(jPanel1Layout);
+            jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(USER_PAPER)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(array)
+                                .addComponent(array1))
+                            .addGap(130, 130, 130)
+                            .addComponent(CompChoice))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel6)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addGap(152, 152, 152)
+                                    .addComponent(jLabel1)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                            .addComponent(jLabel4)))
+                    .addGap(64, 64, 64))
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(USER_ROCK)
+                                .addComponent(USER_SCISSORS)))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(240, 240, 240)
+                            .addComponent(WINSTATE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            );
+            jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(38, 38, 38)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel4))
+                    .addGap(38, 38, 38)
+                    .addComponent(USER_ROCK)
+                    .addGap(18, 18, 18)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(USER_PAPER)
+                                .addComponent(CompChoice))
+                            .addGap(18, 18, 18)
+                            .addComponent(USER_SCISSORS))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(array)
+                            .addGap(7, 7, 7)
+                            .addComponent(array1)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                    .addComponent(jLabel6)
+                    .addGap(33, 33, 33)
+                    .addComponent(WINSTATE)
+                    .addGap(103, 103, 103))
+            );
+
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+            getContentPane().setLayout(layout);
+            layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
+            );
+            layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                    .addGap(0, 0, 0))
+            );
+
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
 
     private void USER_SCISSORSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_SCISSORSActionPerformed
     //Scissors
-    
     USER_CHOICE = 3;
     RNG();
+    PrevNum();
     choices();
     NumToChoice();
+    
     }//GEN-LAST:event_USER_SCISSORSActionPerformed
 
     private void USER_PAPERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_PAPERActionPerformed
@@ -176,6 +196,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     
     USER_CHOICE = 2;
     RNG();
+    PrevNum();
     choices();
     NumToChoice();
     }//GEN-LAST:event_USER_PAPERActionPerformed
@@ -185,6 +206,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     
     USER_CHOICE = 1;
     RNG();
+    PrevNum();
     choices();
     NumToChoice();
     }//GEN-LAST:event_USER_ROCKActionPerformed
@@ -235,6 +257,8 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     private javax.swing.JButton USER_ROCK;
     private javax.swing.JButton USER_SCISSORS;
     private javax.swing.JLabel WINSTATE;
+    private javax.swing.JLabel array;
+    private javax.swing.JLabel array1;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
@@ -250,18 +274,18 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         
     Random randint = new Random();
     
-    int RI = randint.nextInt(4);
+    RI = randint.nextInt(4);
     
-    if (RI == 0){
-       RI = RI + 1; 
-       
-    }
-    if (RI == 4){
-        RI = RI - 1;
-         
-    }
+        if (RI == 0){
+           RI = RI + 1; 
+           
+        }
+        if (RI == 4){
+            RI = RI - 1;
+             
+        }
     CRI  = String.valueOf(RI);
-    
+    arr[1] = RI;
    }
    
    // This Method Checks To See What The Value Of The User Choice Is And What
@@ -315,9 +339,20 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
        }
    }
     public void PrevNum(){
-        LastInt = Integer.valueOf(UC);
-        if (CRI == 1 && LastInt == 1){
-        RNG();
+        
+        arr[1] = RI;
+        arr[0] = arr[1];
+        
+        String UU = String.valueOf(arr[0]);
+        String UUU = String.valueOf(arr[1]);
+        
+        array.setText(UU);
+        array1.setText(UUU);
+        
+        if ( arr[0] == 1 && arr[1] == 1){
+        
+        arr[1] = 
     }
+        
     }
 }
