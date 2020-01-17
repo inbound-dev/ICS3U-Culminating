@@ -17,6 +17,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     String CRI;
     int USER_CHOICE;
     int UC;
+    int LastInt;
     
     Random randint = new Random();
     int RI = randint.nextInt(4);
@@ -259,10 +260,8 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         RI = RI - 1;
          
     }
-    
-   
-    
     CRI  = String.valueOf(RI);
+    
    }
    
    // This Method Checks To See What The Value Of The User Choice Is And What
@@ -315,4 +314,10 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
            CompChoice.setText("Scissors");
        }
    }
+    public void PrevNum(){
+        LastInt = Integer.valueOf(UC);
+        if (CRI == 1 && LastInt == 1){
+        RNG();
+    }
+    }
 }
