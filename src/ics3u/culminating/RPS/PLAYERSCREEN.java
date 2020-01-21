@@ -20,6 +20,14 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     int LastInt;
     int CurrentInt;
     int [] arr = new int [2];
+    int w;
+    int l;
+    double wlr;
+    String ll;
+    String ww;
+    double www;
+    double lll;
+    String wlrt;
     
     
     
@@ -53,6 +61,12 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         WINSTATE = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        WINS = new javax.swing.JLabel();
+        LOSSES = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Ratio = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,39 +107,67 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
 
         jLabel6.setText("Win Or Loss Status");
 
+        WINS.setText("Pending....");
+
+        LOSSES.setText("Pending...");
+
+        jLabel7.setText("W/L Ratio");
+
+        Ratio.setText("Pending....");
+
+        jLabel9.setText("Wins");
+
+        jLabel10.setText("Losses");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(USER_PAPER)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CompChoice))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(152, 152, 152)
-                                .addComponent(jLabel1)))
+                                .addComponent(jLabel1))
+                            .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                        .addComponent(jLabel4)))
-                .addGap(64, 64, 64))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(jLabel4))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(USER_ROCK)
-                            .addComponent(USER_SCISSORS)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(WINSTATE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(USER_PAPER)
+                                .addGap(106, 106, 106)
+                                .addComponent(WINS))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(USER_ROCK)
+                                        .addGap(112, 112, 112)
+                                        .addComponent(jLabel9))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(USER_SCISSORS)
+                                        .addGap(155, 155, 155)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(Ratio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(240, 240, 240)
+                                .addComponent(WINSTATE)))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(LOSSES)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CompChoice)))))
+                .addGap(64, 64, 64))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,15 +177,33 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addGap(38, 38, 38)
-                .addComponent(USER_ROCK)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(USER_ROCK)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addGap(23, 23, 23)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CompChoice)
+                            .addComponent(USER_PAPER)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(WINS)
+                        .addComponent(LOSSES)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(USER_PAPER)
-                    .addComponent(CompChoice))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(USER_SCISSORS)
+                    .addComponent(jLabel7))
                 .addGap(18, 18, 18)
-                .addComponent(USER_SCISSORS)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(Ratio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(33, 33, 33)
                 .addComponent(WINSTATE)
@@ -159,7 +219,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -182,6 +242,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     RNG();
     choices();
     NumToChoice();
+    
     }//GEN-LAST:event_USER_PAPERActionPerformed
 
     private void USER_ROCKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_ROCKActionPerformed
@@ -191,6 +252,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     RNG();
     choices();
     NumToChoice();
+    
     }//GEN-LAST:event_USER_ROCKActionPerformed
 
     /**
@@ -235,15 +297,21 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CompChoice;
+    private javax.swing.JLabel LOSSES;
+    private javax.swing.JLabel Ratio;
     private javax.swing.JButton USER_PAPER;
     private javax.swing.JButton USER_ROCK;
     private javax.swing.JButton USER_SCISSORS;
+    private javax.swing.JLabel WINS;
     private javax.swing.JLabel WINSTATE;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
     
@@ -276,31 +344,57 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
        
        if(USER_CHOICE == 1 && UC == 1){
            WINSTATE.setText("You Tied"); 
+           
        }
        if(USER_CHOICE == 1 && UC == 3){
            WINSTATE.setText("You won");
+           w = w + 1;
+           ww = String.valueOf(w);
+           WINS.setText(ww);
        }
        if(USER_CHOICE == 1 && UC == 2){
            WINSTATE.setText("You Lost"); 
+           l = l + 1; 
+           ll = String.valueOf(l);
+           LOSSES.setText(ll);
        }
        if(USER_CHOICE == 2 && UC == 2){
            WINSTATE.setText("You Tied"); 
+           
        }
        if(USER_CHOICE == 2 && UC == 1){
            WINSTATE.setText("You won"); 
+           w = w + 1;
+           ww = String.valueOf(w);
+           WINS.setText(ww);
        }
        if(USER_CHOICE == 2 && UC == 3){
            WINSTATE.setText("You Lost"); 
+           l = l + 1; 
+           ll = String.valueOf(l);
+           LOSSES.setText(ll);
        }
        if(USER_CHOICE == 3 && UC == 3){
            WINSTATE.setText("You Tied"); 
+           
        }
        if(USER_CHOICE == 3 && UC == 1){
            WINSTATE.setText("You won");
+           w = w + 1;
+           ww = String.valueOf(w);
+           WINS.setText(ww);
        }
        if(USER_CHOICE == 3 && UC == 2){
            WINSTATE.setText("You Lost");
+           l = l + 1; 
+           ll = String.valueOf(l);
+           LOSSES.setText(ll);
        }
+      www = Integer.valueOf(ww);
+      lll = Integer.valueOf(ll);
+      wlr = www / lll;
+      wlrt = String.valueOf(wlr);
+      Ratio.setText(wlrt);
    }
    
    // This Method Checks What The Value Of The Computer's Choice Is And Makes 
