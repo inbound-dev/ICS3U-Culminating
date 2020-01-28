@@ -24,13 +24,13 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     int LastInt;
     int CurrentInt;
     int [] arr = new int [2];
-    int win;
-    int loss;
-    double wlr;
+    int win = 0;
+    int loss = 0;
+    double wlr = 0;
     String lloss;
     String wwin;
-    double wwwin;
-    double llloss;
+    double wwwin = 0;
+    double llloss = 0;
     String wlrt;
     
     
@@ -266,7 +266,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     
     public static void main(String args[]) {
         
-        System.out.println("Note The Error You See is just That it is Trying to Print a Double But it starts at 0 thus why it says null");
+        //System.out.println("Note The Error You See is just That it is Trying to Print a Double But it starts at 0 thus why it says null");
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -375,7 +375,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
        }
        if(USER_CHOICE == 2 && UC == 3){
            WINSTATE.setText("You Lost"); 
-           loss = l + 1; 
+           loss = loss + 1; 
            lloss = String.valueOf(loss);
            LOSSES.setText(lloss);
        }
@@ -391,16 +391,10 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
        }
        if(USER_CHOICE == 3 && UC == 2){
            WINSTATE.setText("You Lost");
-           loss = loss + 1oss; 
-           ll = String.valueOf(loss);
+           loss = loss + 1; 
+           lloss = String.valueOf(loss);
            LOSSES.setText(lloss);
        }
-      wwwin = Integer.valueOf(wwin);
-      llloss = Integer.valueOf(lloss);
-      wlr = wwwin / llloss;
-      wlrt = String.valueOf(wlr);
-      Ratio.setText(wlrt);
-      //wlrt is win loss ratio text
    }
    
    // This Method Checks What The Value Of The Computer's Choice Is And Makes 
@@ -416,11 +410,5 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
        if(UC == 3){
            CompChoice.setText("Scissors");
        }
-   }
-   // This Method Takes all Methods and Combines them to be called all at once
-   public void EXECUTION(){
-    RNG();
-    choices();
-    NumToChoice();
    }
 }
