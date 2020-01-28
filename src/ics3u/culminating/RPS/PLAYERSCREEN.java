@@ -68,8 +68,6 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         WINS = new javax.swing.JLabel();
         LOSSES = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        Ratio = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -116,10 +114,6 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
 
         LOSSES.setText("Pending...");
 
-        jLabel7.setText("W/L Ratio");
-
-        Ratio.setText("Pending....");
-
         jLabel9.setText("Wins");
 
         jLabel10.setText("Losses");
@@ -152,16 +146,11 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
                                         .addComponent(USER_ROCK)
                                         .addGap(112, 112, 112)
                                         .addComponent(jLabel9))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(USER_PAPER)
-                                        .addGap(165, 165, 165)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(Ratio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                    .addComponent(USER_PAPER)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(240, 240, 240)
                                 .addComponent(WINSTATE)))
-                        .addGap(24, 24, 24)
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -195,18 +184,14 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addComponent(CompChoice)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7))
+                        .addComponent(CompChoice))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(WINS)
                             .addComponent(LOSSES))
                         .addGap(18, 18, 18)
                         .addComponent(USER_PAPER)))
-                .addGap(27, 27, 27)
-                .addComponent(Ratio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(47, 47, 47)
                 .addComponent(USER_SCISSORS)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jLabel6)
@@ -303,7 +288,6 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CompChoice;
     private javax.swing.JLabel LOSSES;
-    private javax.swing.JLabel Ratio;
     private javax.swing.JButton USER_PAPER;
     private javax.swing.JButton USER_ROCK;
     private javax.swing.JButton USER_SCISSORS;
@@ -315,7 +299,6 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
