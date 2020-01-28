@@ -237,21 +237,27 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     private void USER_SCISSORSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_SCISSORSActionPerformed
     //Scissors
     USER_CHOICE = 3;
-    EXECUTION();
+     RNG();
+    choices();
+    NumToChoice();
     }//GEN-LAST:event_USER_SCISSORSActionPerformed
 
     private void USER_PAPERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_PAPERActionPerformed
     //Paper
     
     USER_CHOICE = 2;
-    EXECUTION();
+     RNG();
+    choices();
+    NumToChoice();
     }//GEN-LAST:event_USER_PAPERActionPerformed
 
     private void USER_ROCKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_ROCKActionPerformed
     // ROCK
     
     USER_CHOICE = 1;
-    EXECUTION();
+     RNG();
+    choices();
+    NumToChoice();
     }//GEN-LAST:event_USER_ROCKActionPerformed
 
     /**
@@ -260,7 +266,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
     
     public static void main(String args[]) {
         
-        System.out.println("Note The Error You See is just That it is Trying to Print a Double But it starts at 0");
+        System.out.println("Note The Error You See is just That it is Trying to Print a Double But it starts at 0 thus why it says null");
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
