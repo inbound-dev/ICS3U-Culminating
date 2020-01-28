@@ -3,7 +3,7 @@
  * 
  * This Program Was Created By Jordan Hamilton On January 22, 2020
  *
- * Patent Pending
+ * 
  */
 
 package ics3u.culminating.RPS;
@@ -218,7 +218,7 @@ public class PLAYERSCREEN extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ 
     private void USER_SCISSORSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USER_SCISSORSActionPerformed
     //Scissors
     USER_CHOICE = 3;
